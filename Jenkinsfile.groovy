@@ -1,4 +1,5 @@
 node {
+    properties([parameters([string(defaultValue: '127.0.0.1', description: 'Please give IP to host a website', name: 'DEVIP', trim: true)])])
     stage("Pull git"){
         git "git@github.com:farrukh90/website.git"
     }
